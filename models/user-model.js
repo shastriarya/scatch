@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema({
         unique : true,
         require : true
     },
-    pasword : String,
+    password : String,
 
     cart : {
         type : Array,

@@ -11,7 +11,7 @@ const onwerSchema = mongoose.Schema({
         type : String,
         unique : true,
     },
-    pasword : String,
+    password : String,
     products : {
         type : Array,
         default : []
@@ -20,4 +20,4 @@ const onwerSchema = mongoose.Schema({
     gstin : String
 });
 
-module.exports = mongoose.model("onwer", userSchema);
+module.exports = mongoose.model("onwer", onwerSchema);

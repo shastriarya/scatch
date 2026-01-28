@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const {registerUser,loginUser,logoutUser} = require("../controllers/user.authController")
 
-router.get("/",(req,res)=>{
-    res.status(200).send("Working")
-})
+router.post("/register", registerUser);
+router.post("/login", loginUser);
+router.get("/logout", logoutUser);
 
 module.exports = router;
