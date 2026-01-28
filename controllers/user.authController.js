@@ -23,7 +23,10 @@ module.exports.registerUser = async (req, res) => {
             password: hash,
           });
           let token = generateToken(user);
-          res.cookie("token", token);
+          res.cookie("token", token, {
+            httpOnly: true,
+            sameSite: "strict",
+          });
           res.redirect("/shop")
         }
       });
