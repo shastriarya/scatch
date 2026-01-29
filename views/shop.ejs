@@ -1,10 +1,16 @@
 <%- include('./partials/header') %>
 
+<% if (success && success.length> 0) { %>
+    <div class="absolute top-6 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded shadow">
+        <%= success[0] %>
+    </div>
+    <% } %>
+
     <div class="min-h-screen bg-[#f6f7fb] px-16 py-14 flex gap-12">
 
         <!-- ================= SIDEBAR ================= -->
         <aside class="w-[22%] bg-white rounded-2xl shadow-lg p-8 h-fit sticky top-10">
-            <a class="text-red-400" href="/owners/admin">Go to Admin Page</a>
+            
 
             <!-- Sort -->
             <form action="/shop" method="get" class="mb-12">

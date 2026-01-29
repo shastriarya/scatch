@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const ownerModel = require("../models/owner-model")
 const isLoggedIn = require("../middleware/isLoggedIn")
 const createOwner = require("../controllers/owner.authCotroller")
 
